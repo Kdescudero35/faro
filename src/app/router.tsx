@@ -3,8 +3,8 @@ import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
 const RootError = lazy(() => import("@shared/components/RootError"));
-const ItemsListPage = lazy(() => import("@features/items").then(m => ({ default: m.ItemsListPage })));
-const ItemDetailPage = lazy(() => import("@features/items").then(m => ({ default: m.ItemDetailPage })));
+const ListPage = lazy(() => import("@features/items").then(m => ({ default: m.ListPage })));
+const DetailPage = lazy(() => import("@features/items").then(m => ({ default: m.DetailPage })));
 
 export const router = createBrowserRouter([
   {
@@ -12,8 +12,8 @@ export const router = createBrowserRouter([
     element: <App />,
     errorElement: <RootError />,
     children: [
-      { index: true, element: <ItemsListPage /> },
-      { path: 'items/:id', element: <ItemDetailPage /> },
+      { index: true, element: <ListPage /> },
+      { path: 'items/:id', element: <DetailPage /> },
       { path: '*', element: <RootError /> },
     ],
   },

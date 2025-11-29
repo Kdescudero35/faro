@@ -1,0 +1,123 @@
+    {
+        "query": "iphone",
+        "paging": {
+            "total": 10,
+            "offset": 0,
+            "limit": 4
+        },
+        "results": [
+            {
+                "id": "MLA100000001",
+                "title": "Apple iPhone 13 (128 GB) - Azul",
+                "price": 1367999,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13.webp?v=1757093138",
+                "installments": {
+                    "quantity": 12,
+                    "amount": 113999.92
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.9,
+                    "total": 35
+                }
+            },
+            {
+                "id": "MLA100000002",
+                "title": "iPhone 13 (close-up)",
+                "price": 1425000,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13Mini.webp?v=1757093138"
+            },
+            {
+                "id": "MLA100000003",
+                "title": "iPhone 14 Pro Max (256 GB) - Negro",
+                "price": 2290000,
+                "currency_id": "ARS",
+                "installments": {
+                    "quantity": 12,
+                    "amount": 216666.67
+                },
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138"
+            },
+            {
+                "id": "MLA100000004",
+                "title": "iPhone 14 Pro Max (512 GB) - Grafito",
+                "price": 2499000,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138"
+            },
+            {
+                "id": "MLA100000005",
+                "title": "iPhone 12 Pro (256 GB) - Plata",
+                "price": 1099999,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138",
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.8,
+                    "total": 143
+                }
+            },
+            {
+                "id": "MLA100000006",
+                "title": "iPhone 12 Pro (128 GB) - Negro",
+                "price": 1049000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "reviews": {
+                    "rating_average": 3.9,
+                    "total": 35
+                },
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138"
+            },
+            {
+                "id": "MLA100000007",
+                "title": "iPhone 11 Pro (128 GB) - Negro",
+                "price": 799999,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone11Pro.webp?v=1757093138"
+            },
+            {
+                "id": "MLA100000008",
+                "title": "iPhone X (64 GB) - Gris Espacial",
+                "price": 365000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://olimpica.vtexassets.com/arquivos/ids/857916/image-3ab3283018f745408dbb770795103ea9.jpg?v=637897845793170000",
+                "reviews": {
+                    "rating_average": 4.3,
+                    "total": 410
+                }
+            },
+            {
+                "id": "MLA100000009",
+                "title": "iPhone 8 (64 GB) - Gris Espacial",
+                "price": 455000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://exitocol.vtexassets.com/arquivos/ids/24430982/iphone-8-plus-64-gb-gris-espacial-reacondicionado-14-meses-garantia.jpg?v=638609084682100000"
+            },
+            {
+                "id": "MLA100000010",
+                "title": "iPhone 12 Pro Max (256 GB) - Vista trasera",
+                "price": 1699000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12ProMax.webp?v=1757093138",
+                "shipping": {
+                    "free_shipping": true
+                }
+            }
+        ]
+    }
