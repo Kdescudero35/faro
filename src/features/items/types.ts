@@ -29,15 +29,24 @@ export interface Description {
     plain_text: string;
 }
 
+export interface SellerAddress {
+    city: {
+        name: string;
+    };
+    state: {
+        name: string;
+    };
+}
+
 export interface Product {
     id: string;
     title: string;
     price: number;
     reviews?: Reviews;
-    thumbnail?: string;
     pictures?: Picture[];
     shipping?: Shipping;
     condition: ConditionType;
+    thumbnail?: string;
     warranty?: string;
     permalink?: string;
     currency_id: string;
@@ -45,6 +54,7 @@ export interface Product {
     description?: Description;
     installments?: Installments;
     sold_quantity?: number;
+    seller_address?: SellerAddress;
     available_quantity?: number;
 }
 

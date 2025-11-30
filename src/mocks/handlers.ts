@@ -7,6 +7,7 @@ export const handlers = [
     http.get('/api/products', ({ request }) => {
         const url = new URL(request.url);
         const q = url.searchParams.get('q');
+
         const offset = parseInt(url.searchParams.get('offset') || '0', 10);
         const limit = parseInt(url.searchParams.get('limit') || '10', 10);
 
@@ -29,15 +30,19 @@ export const handlers = [
 
         const paginated = filtered.slice(offset, offset + limit);
 
-        return HttpResponse.json({
-            query: q || '',
-            paging: {
-                total: filtered.length,
-                offset,
-                limit
-            },
-            results: paginated
-        });
+        if (paginated) {
+            return HttpResponse.json({
+                query: q || '',
+                paging: {
+                    total: filtered.length,
+                    offset,
+                    limit
+                },
+                results: paginated
+            });
+        }
+
+        return new HttpResponse(null, { status: 404 });
     }),
 
     http.get('/api/products/:id', ({ params }) => {

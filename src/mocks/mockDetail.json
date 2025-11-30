@@ -29,10 +29,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Rosario"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Santa Fe"
             }
         },
         "attributes": [
@@ -81,10 +81,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Córdoba"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Córdoba"
             }
         },
         "attributes": [
@@ -133,10 +133,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Barranquilla"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Atlántico"
             }
         },
         "attributes": [
@@ -185,10 +185,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "La Plata"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Buenos Aires"
             }
         },
         "attributes": [
@@ -393,10 +393,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Cali"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Valle del Cauca"
             }
         },
         "attributes": [

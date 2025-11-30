@@ -5,20 +5,21 @@ import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import type { Product, SearchResult } from "../types";
 
 interface UseListPageReturn {
+    sort: 'price_asc' | 'price_desc' | null;
     limit: number;
+    total: number;
+    error: unknown;
     offset: number;
     loading: boolean;
     products: Product[];
+    condition: 'new' | 'used' | null;
     nextPage: () => void;
     prevPage: () => void;
     searchRef: React.RefObject<HTMLInputElement | null>;
-    handleSearch: () => void;
-    navigateToDetail: (id: string) => void;
-    sort: 'price_asc' | 'price_desc' | null;
-    condition: 'new' | 'used' | null;
     toggleSort: () => void;
+    handleSearch: () => void;
     toggleCondition: (condition: 'new' | 'used') => void;
-    total: number;
+    navigateToDetail: (id: string) => void;
 }
 
 const LIMIT = 4;
@@ -28,7 +29,7 @@ export const useListPage = (): UseListPageReturn => {
     const [searchParams, setSearchParams] = useSearchParams();
 
     const [sort, setSort] = useState<'price_asc' | 'price_desc' | null>(null);
-    const [offset, setOffset] = useState(0);
+    const [offset, setOffset] = useState<number>(0);
     const [condition, setCondition] = useState<'new' | 'used' | null>(null);
 
     const searchRef = useRef<HTMLInputElement | null>(null);
@@ -38,7 +39,7 @@ export const useListPage = (): UseListPageReturn => {
         navigate(`/detail/${id}`);
     }
 
-    const { data, isLoading } = useQuery({
+    const { data, isLoading, error } = useQuery({
         queryKey: ['products', searchQuery, offset, sort, condition],
         queryFn: async () => {
             const params = new URLSearchParams({
@@ -82,19 +83,20 @@ export const useListPage = (): UseListPageReturn => {
     const prevPage = () => setOffset((prev: number) => Math.max(0, prev - LIMIT));
 
     return {
+        sort,
+        error,
         limit: LIMIT,
+        total: data?.paging.total ?? 0,
         offset,
         loading: isLoading,
-        searchRef,
-        products: data?.results ?? [] as Product[],
         nextPage,
+        products: data?.results ?? [] as Product[],
         prevPage,
-        handleSearch,
-        navigateToDetail,
-        sort,
+        searchRef,
         condition,
         toggleSort,
+        handleSearch,
         toggleCondition,
-        total: data?.paging.total ?? 0,
+        navigateToDetail,
     };
 };

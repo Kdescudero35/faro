@@ -1,9 +1,10 @@
+import type { Product } from "@/features/items/types";
 interface ProductAttributesProps {
-    product: any;
+    product: Product | null | undefined;
 }
 
 const ProductAttributes: React.FC<ProductAttributesProps> = ({ product }) => {
-    if (!product.attributes || product.attributes.length === 0) return null;
+    if (!product?.attributes || product.attributes.length === 0) return null;
 
     return (
         <div className="pt-6 border-t border-slate-200 dark:border-slate-800">

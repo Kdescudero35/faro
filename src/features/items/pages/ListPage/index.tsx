@@ -5,10 +5,14 @@ import { HeroHeader } from "./components/HeroHeader"
 import { ProductGrid } from "./components/ProductGrid"
 import { SortToolbar } from "./components/SortToolbar"
 
+import { ServiceUnavailable } from "@/shared/components/ServiceUnavailable"
+
 const ListPage: React.FC = () => {
     const {
         sort,
         limit,
+        total,
+        error,
         offset,
         loading,
         nextPage,
@@ -20,8 +24,11 @@ const ListPage: React.FC = () => {
         handleSearch,
         toggleCondition,
         navigateToDetail,
-        total,
     } = useListPage();
+
+    if (error) {
+        return <ServiceUnavailable />
+    }
 
     return (
         <>

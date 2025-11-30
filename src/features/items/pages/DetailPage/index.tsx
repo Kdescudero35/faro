@@ -6,12 +6,17 @@ import ProductActions from "./components/ProductActions";
 import ProductAttributes from "./components/ProductAttributes";
 
 import { SkeletonDetailPage } from "@/shared/components/Skeleton/SkeletonDetailPage";
+import { ServiceUnavailable } from "@/shared/components/ServiceUnavailable";
 
 const ItemDetailPage: React.FC = () => {
-    const { product, loading } = useDetail();
+    const { product, loading, handleAddToCart, quantity, handleIncrement, handleDecrement, error } = useDetail();
 
     if (loading) {
         return <SkeletonDetailPage />;
+    }
+
+    if (error) {
+        return <ServiceUnavailable />
     }
 
     const mainImage = product?.pictures?.[0]?.url || product?.thumbnail;
@@ -26,7 +31,12 @@ const ItemDetailPage: React.FC = () => {
                                 <ProductGallery product={product} mainImage={mainImage} />
                                 <div className="flex flex-col gap-6">
                                     <ProductInfo product={product} />
-                                    <ProductActions />
+                                    <ProductActions
+                                        quantity={quantity}
+                                        handleAddToCart={handleAddToCart}
+                                        handleIncrement={handleIncrement}
+                                        handleDecrement={handleDecrement}
+                                    />
                                     <ProductAttributes product={product} />
                                 </div>
                             </div>

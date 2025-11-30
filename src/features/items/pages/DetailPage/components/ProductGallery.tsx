@@ -1,5 +1,6 @@
+import type { Product } from "@/features/items/types";
 interface ProductGalleryProps {
-    product: any;
+    product: Product | null | undefined;
     mainImage: string | undefined;
 }
 
@@ -8,11 +9,11 @@ const ProductGallery: React.FC<ProductGalleryProps> = ({ product, mainImage }) =
         <div className="flex flex-col gap-4">
             <div
                 className="w-full bg-white bg-center bg-no-repeat bg-contain rounded-xl shadow-sm aspect-square"
-                data-alt={product.title}
+                data-alt={product?.title}
                 style={{ backgroundImage: `url("${mainImage}")` }}
             ></div>
 
-            {product.pictures && product.pictures.length > 1 && (
+            {product?.pictures && product.pictures.length > 1 && (
                 <div className="grid grid-cols-4 gap-4">
                     {product.pictures.slice(0, 4).map((pic: any) => (
                         <div
