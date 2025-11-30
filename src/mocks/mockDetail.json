@@ -1,0 +1,522 @@
+[
+    {
+        "id": "MLA100000001",
+        "title": "Apple iPhone 13 (128 GB) - Azul",
+        "price": 1367999,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "new",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000001",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 12,
+            "amount": 113999.92,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": true,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": 4.9,
+            "total": 35
+        }
+    },
+    {
+        "id": "MLA100000002",
+        "title": "iPhone 13 (close-up)",
+        "price": 1425000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "new",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000002",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13Mini.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 1425000,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": null,
+            "total": 0
+        }
+    },
+    {
+        "id": "MLA100000003",
+        "title": "iPhone 14 Pro Max (256 GB) - Negro",
+        "price": 2290000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "new",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000003",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 12,
+            "amount": 216666.67,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": null,
+            "total": 0
+        }
+    },
+    {
+        "id": "MLA100000004",
+        "title": "iPhone 14 Pro Max (512 GB) - Grafito",
+        "price": 2499000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "new",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000004",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 2499000,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": null,
+            "total": 0
+        }
+    },
+    {
+        "id": "MLA100000005",
+        "title": "iPhone 12 Pro (256 GB) - Plata",
+        "price": 1099999,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "used",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000005",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 1099999,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": true,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": 4.8,
+            "total": 143
+        }
+    },
+    {
+        "id": "MLA100000006",
+        "title": "iPhone 12 Pro (128 GB) - Negro",
+        "price": 1049000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "used",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000006",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 1049000,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": 3.9,
+            "total": 35
+        }
+    },
+    {
+        "id": "MLA100000007",
+        "title": "iPhone 11 Pro (128 GB) - Negro",
+        "price": 799999,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "used",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000007",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone11Pro.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 799999,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": null,
+            "total": 0
+        }
+    },
+    {
+        "id": "MLA100000008",
+        "title": "iPhone X (64 GB) - Gris Espacial",
+        "price": 365000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "used",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000008",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://olimpica.vtexassets.com/arquivos/ids/857916/image-3ab3283018f745408dbb770795103ea9.jpg?v=637897845793170000"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 365000,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": 4.3,
+            "total": 410
+        }
+    },
+    {
+        "id": "MLA100000009",
+        "title": "iPhone 8 (64 GB) - Gris Espacial",
+        "price": 455000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "used",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000009",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://exitocol.vtexassets.com/arquivos/ids/24430982/iphone-8-plus-64-gb-gris-espacial-reacondicionado-14-meses-garantia.jpg?v=638609084682100000"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 455000,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": false,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": null,
+            "total": 0
+        }
+    },
+    {
+        "id": "MLA100000010",
+        "title": "iPhone 12 Pro Max (256 GB) - Vista trasera",
+        "price": 1699000,
+        "original_price": null,
+        "currency_id": "ARS",
+        "available_quantity": 1,
+        "sold_quantity": 0,
+        "condition": "used",
+        "permalink": "https://www.mercadolibre.com.ar/p/MLA100000010",
+        "pictures": [
+            {
+                "id": "1",
+                "url": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12ProMax.webp?v=1757093138"
+            }
+        ],
+        "installments": {
+            "quantity": 1,
+            "amount": 1699000,
+            "rate": 0,
+            "currency_id": "ARS"
+        },
+        "shipping": {
+            "free_shipping": true,
+            "mode": "me2",
+            "logistic_type": "fulfillment",
+            "store_pick_up": false
+        },
+        "seller_address": {
+            "city": {
+                "name": "Desconocido"
+            },
+            "state": {
+                "name": "Desconocido"
+            }
+        },
+        "attributes": [
+            {
+                "id": "BRAND",
+                "name": "Marca",
+                "value_name": "Apple"
+            }
+        ],
+        "warranty": null,
+        "description": {
+            "plain_text": "Sin descripción disponible."
+        },
+        "reviews": {
+            "rating_average": null,
+            "total": 0
+        }
+    }
+]

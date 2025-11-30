@@ -1,4 +1,6 @@
 import { http, HttpResponse } from 'msw';
+
+import mockDataDetail from './mockDetail.json';
 import mockDataListPage from './mockDataListPage.json';
 
 export const handlers = [
@@ -8,8 +10,6 @@ export const handlers = [
         const offset = parseInt(url.searchParams.get('offset') || '0', 10);
         const limit = parseInt(url.searchParams.get('limit') || '10', 10);
 
-        // Aquí podrías filtrar `mockDataListPage.results` según `q`, `offset`, etc.
-        // Ejemplo simple:
         const filtered = mockDataListPage.results.filter(item =>
             !q || item.title.toLowerCase().includes(q.toLowerCase())
         );
@@ -24,5 +24,23 @@ export const handlers = [
             },
             results: paginated
         });
+    }),
+
+    http.get('/api/products/:id', ({ params }) => {
+        const { id } = params;
+
+        const item = mockDataDetail.find(item => item.id === id);
+
+        if (item) {
+            return HttpResponse.json(item);
+        }
+
+        const listItem = mockDataListPage.results.find(item => item.id === id);
+
+        if (listItem) {
+            return HttpResponse.json(listItem);
+        }
+
+        return new HttpResponse(null, { status: 404 });
     })
 ];

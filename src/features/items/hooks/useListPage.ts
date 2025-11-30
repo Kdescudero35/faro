@@ -28,11 +28,11 @@ export const useListPage = (): UseListPageReturn => {
     const searchQuery = searchParams.get("q") ?? "";
 
     const navigateToDetail = (id: string) => {
-        navigate(`/items/${id}`);
+        navigate(`/detail/${id}`);
     }
 
     const { data, isLoading } = useQuery({
-        queryKey: ['items', searchQuery, offset],
+        queryKey: ['products', searchQuery, offset],
         queryFn: async () => {
             const params = new URLSearchParams({
                 q: searchQuery,
