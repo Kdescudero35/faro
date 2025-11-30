@@ -237,10 +237,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "CABA"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Buenos Aires"
             }
         },
         "attributes": [
@@ -289,10 +289,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Medellin"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Antioquia"
             }
         },
         "attributes": [
@@ -341,10 +341,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Bogota"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Distrito Capital de Colombia"
             }
         },
         "attributes": [
@@ -445,10 +445,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "Medellin"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Antioquia"
             }
         },
         "attributes": [
@@ -497,10 +497,10 @@
         },
         "seller_address": {
             "city": {
-                "name": "Desconocido"
+                "name": "CABA"
             },
             "state": {
-                "name": "Desconocido"
+                "name": "Buenos Aires"
             }
         },
         "attributes": [

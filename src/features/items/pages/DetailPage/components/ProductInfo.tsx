@@ -1,4 +1,4 @@
-import { Star, StarHalf } from "lucide-react";
+import { Star, StarHalf, MapPin, Truck, CreditCard } from "lucide-react";
 
 interface ProductInfoProps {
     product: any;
@@ -37,8 +37,33 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
                 ${product.price.toLocaleString("es-AR")}
             </p>
 
+            {product.installments && (
+                <div className="flex gap-2 items-center mt-2 text-sm text-slate-600 dark:text-slate-300">
+                    <CreditCard size={16} />
+                    <span>
+                        en {product.installments.quantity}x $ {product.installments.amount.toLocaleString("es-AR")}
+                    </span>
+                </div>
+            )}
+
+            {product.shipping?.free_shipping && (
+                <div className="flex gap-2 items-center mt-2 text-sm font-medium text-green-600 dark:text-green-400">
+                    <Truck size={16} />
+                    <span>Envío gratis</span>
+                </div>
+            )}
+
+            {product.seller_address && (
+                <div className="flex gap-2 items-center mt-4 text-sm text-slate-500 dark:text-slate-400">
+                    <MapPin size={16} />
+                    <span>
+                        {product.seller_address.city.name}, {product.seller_address.state.name}
+                    </span>
+                </div>
+            )}
+
             {product.warranty && (
-                <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
+                <p className="mt-4 text-sm text-slate-500 dark:text-slate-400">
                     {product.warranty}
                 </p>
             )}

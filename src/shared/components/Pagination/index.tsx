@@ -1,7 +1,7 @@
 interface PaginationProps {
     limit: number;
     offset: number;
-    products: any[];
+    total: number;
     prevPage: () => void;
     nextPage: () => void;
 }
@@ -9,7 +9,7 @@ interface PaginationProps {
 export const Pagination: React.FC<PaginationProps> = ({
     limit,
     offset,
-    products,
+    total,
     prevPage,
     nextPage
 }) => {
@@ -27,7 +27,7 @@ export const Pagination: React.FC<PaginationProps> = ({
             </span>
             <button
                 onClick={nextPage}
-                disabled={products.length < limit}
+                disabled={offset + limit >= total}
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-white rounded-lg border border-gray-300 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed dark:bg-white/5 dark:border-white/10 dark:text-white dark:hover:bg-white/10"
             >
                 Siguiente

@@ -10,9 +10,23 @@ export const handlers = [
         const offset = parseInt(url.searchParams.get('offset') || '0', 10);
         const limit = parseInt(url.searchParams.get('limit') || '10', 10);
 
-        const filtered = mockDataListPage.results.filter(item =>
+        const sort = url.searchParams.get('sort');
+        const condition = url.searchParams.get('condition');
+
+        let filtered = mockDataListPage.results.filter(item =>
             !q || item.title.toLowerCase().includes(q.toLowerCase())
         );
+
+        if (condition) {
+            filtered = filtered.filter(item => item.condition === condition);
+        }
+
+        if (sort === 'price_asc') {
+            filtered.sort((a, b) => a.price - b.price);
+        } else if (sort === 'price_desc') {
+            filtered.sort((a, b) => b.price - a.price);
+        }
+
         const paginated = filtered.slice(offset, offset + limit);
 
         return HttpResponse.json({

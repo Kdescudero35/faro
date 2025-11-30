@@ -14,11 +14,7 @@ const ItemDetailPage: React.FC = () => {
         return <SkeletonDetailPage />;
     }
 
-    if (!product) {
-        return <div className="flex justify-center items-center h-screen">Product not found</div>;
-    }
-
-    const mainImage = product.pictures?.[0]?.url || product.thumbnail;
+    const mainImage = product?.pictures?.[0]?.url || product?.thumbnail;
 
     return (
         <>
