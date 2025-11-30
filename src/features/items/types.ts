@@ -38,14 +38,14 @@ export interface Product {
     pictures?: Picture[];
     shipping?: Shipping;
     condition: ConditionType;
-    currency_id: string;
-    installments?: Installments;
-    description?: Description;
-    attributes?: Attribute[];
     warranty?: string;
+    permalink?: string;
+    currency_id: string;
+    attributes?: Attribute[];
+    description?: Description;
+    installments?: Installments;
     sold_quantity?: number;
     available_quantity?: number;
-    permalink?: string;
 }
 
 export interface Paging {

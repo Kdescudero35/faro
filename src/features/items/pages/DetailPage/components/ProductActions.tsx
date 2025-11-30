@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { Minus, Plus, ShoppingBag, HeartPlus } from "lucide-react";
 
-interface ProductActionsProps {
-    product: any;
-}
-
-const ProductActions: React.FC<ProductActionsProps> = ({ product }) => {
+const ProductActions: React.FC = () => {
     const [quantity, setQuantity] = useState(1);
 
     const handleIncrement = () => setQuantity((q) => q + 1);
