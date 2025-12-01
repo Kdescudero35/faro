@@ -1,10 +1,15 @@
 export interface Installments {
     amount: number;
     quantity: number;
+    rate?: number;
+    currency_id?: string;
 }
 
 export interface Shipping {
     free_shipping: boolean;
+    mode?: string;
+    logistic_type?: string;
+    store_pick_up?: boolean;
 }
 
 export interface Reviews {
@@ -42,12 +47,13 @@ export interface Product {
     id: string;
     title: string;
     price: number;
+    original_price?: number | null;
     reviews?: Reviews;
     pictures?: Picture[];
     shipping?: Shipping;
     condition: ConditionType;
     thumbnail?: string;
-    warranty?: string;
+    warranty?: string | null;
     permalink?: string;
     currency_id: string;
     attributes?: Attribute[];

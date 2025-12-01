@@ -3,6 +3,8 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { useQuery, keepPreviousData } from "@tanstack/react-query";
 
 import type { Product, SearchResult } from "../types";
+import { validateSearchInput, validateOffset, validateLimit } from "@/lib/validation";
+import { useDebounce } from "@/shared/hooks/useDebounce";
 
 interface UseListPageReturn {
     sort: 'price_asc' | 'price_desc' | null;
@@ -33,35 +35,40 @@ export const useListPage = (): UseListPageReturn => {
     const [condition, setCondition] = useState<'new' | 'used' | null>(null);
 
     const searchRef = useRef<HTMLInputElement | null>(null);
-    const searchQuery = searchParams.get("q") ?? "";
+    const searchQuery = validateSearchInput(searchParams.get("q") ?? "");
+    
+    // Debounce la query de búsqueda para evitar demasiadas requests
+    const debouncedSearchQuery = useDebounce(searchQuery, 300);
 
     const navigateToDetail = (id: string) => {
-        navigate(`/detail/${id}`);
+        navigate(`/items/${id}`);
     }
 
     const { data, isLoading, error } = useQuery({
-        queryKey: ['products', searchQuery, offset, sort, condition],
+        queryKey: ['products', debouncedSearchQuery, validateOffset(offset), sort, condition],
         queryFn: async () => {
-            const params = new URLSearchParams({
-                q: searchQuery,
-                limit: LIMIT.toString(),
-                offset: offset.toString(),
-            });
-
+            const params = new URLSearchParams();
+            
+            if (debouncedSearchQuery) params.append('q', debouncedSearchQuery);
+            params.append('limit', validateLimit(LIMIT).toString());
+            params.append('offset', validateOffset(offset).toString());
             if (sort) params.append('sort', sort);
             if (condition) params.append('condition', condition);
 
             const response = await fetch(`/api/products?${params.toString()}`);
+            if (!response.ok) throw new Error('Error al obtener productos');
+            
             const data: SearchResult = await response.json();
             return data;
         },
         staleTime: 1000 * 60 * 5,
         placeholderData: keepPreviousData,
+        retry: 1,
     });
 
     const handleSearch = () => {
-        const value = searchRef.current?.value ?? "";
-        setSearchParams({ q: value });
+        const value = validateSearchInput(searchRef.current?.value ?? "");
+        setSearchParams(value ? { q: value } : {});
         setOffset(0);
     };
 
@@ -79,8 +86,8 @@ export const useListPage = (): UseListPageReturn => {
         setOffset(0);
     };
 
-    const nextPage = () => setOffset((prev: number) => prev + LIMIT);
-    const prevPage = () => setOffset((prev: number) => Math.max(0, prev - LIMIT));
+    const nextPage = () => setOffset((prev: number) => validateOffset(prev + LIMIT));
+    const prevPage = () => setOffset((prev: number) => validateOffset(Math.max(0, prev - LIMIT)));
 
     return {
         sort,

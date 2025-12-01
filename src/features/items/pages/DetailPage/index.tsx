@@ -27,9 +27,14 @@ const ItemDetailPage: React.FC = () => {
                 <div className="flex flex-col h-full layout-container grow">
                     <div className="px-4 py-8 sm:px-6 lg:px-8 md:py-12">
                         <div className="mx-auto max-w-7xl">
-                            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-16">
-                                <ProductGallery product={product} mainImage={mainImage} />
-                                <div className="flex flex-col gap-6">
+                            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:gap-12">
+                                {/* Galería - Ocupa más espacio */}
+                                <div className="md:col-span-1">
+                                    <ProductGallery product={product} mainImage={mainImage} />
+                                </div>
+                                
+                                {/* Información del producto - Más compacto */}
+                                <div className="md:col-span-2 flex flex-col gap-4">
                                     <ProductInfo product={product} />
                                     <ProductActions
                                         quantity={quantity}

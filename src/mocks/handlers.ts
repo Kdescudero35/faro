@@ -2,23 +2,34 @@ import { http, HttpResponse } from 'msw';
 
 import mockDataDetail from './mockDetail.json';
 import mockDataListPage from './mockDataListPage.json';
+import { validateSearchInput, validateOffset, validateLimit } from '@/lib/validation';
 
 export const handlers = [
     http.get('/api/products', ({ request }) => {
         const url = new URL(request.url);
-        const q = url.searchParams.get('q');
 
-        const offset = parseInt(url.searchParams.get('offset') || '0', 10);
-        const limit = parseInt(url.searchParams.get('limit') || '10', 10);
+        const q = validateSearchInput(url.searchParams.get('q') ?? '').toLowerCase();
+        const limit = validateLimit(parseInt(url.searchParams.get('limit') || '10', 10));
+        const offset = validateOffset(parseInt(url.searchParams.get('offset') || '0', 10));
 
         const sort = url.searchParams.get('sort');
         const condition = url.searchParams.get('condition');
 
-        let filtered = mockDataListPage.results.filter(item =>
-            !q || item.title.toLowerCase().includes(q.toLowerCase())
-        );
+        if (condition && condition !== 'new' && condition !== 'used') {
+            return new HttpResponse(null, { status: 400, statusText: 'Invalid condition' });
+        }
 
-        if (condition) {
+        if (sort && sort !== 'price_asc' && sort !== 'price_desc') {
+            return new HttpResponse(null, { status: 400, statusText: 'Invalid sort' });
+        }
+
+        let filtered = mockDataListPage.results.filter(item => {
+            if (!q) return true;
+            return item.title.toLowerCase().includes(q) ||
+                item.id.toLowerCase().includes(q);
+        });
+
+        if (condition === 'new' || condition === 'used') {
             filtered = filtered.filter(item => item.condition === condition);
         }
 
@@ -27,22 +38,17 @@ export const handlers = [
         } else if (sort === 'price_desc') {
             filtered.sort((a, b) => b.price - a.price);
         }
-
         const paginated = filtered.slice(offset, offset + limit);
 
-        if (paginated) {
-            return HttpResponse.json({
-                query: q || '',
-                paging: {
-                    total: filtered.length,
-                    offset,
-                    limit
-                },
-                results: paginated
-            });
-        }
-
-        return new HttpResponse(null, { status: 404 });
+        return HttpResponse.json({
+            query: q,
+            paging: {
+                total: filtered.length,
+                offset,
+                limit
+            },
+            results: paginated
+        });
     }),
 
     http.get('/api/products/:id', ({ params }) => {

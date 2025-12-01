@@ -1,7 +1,6 @@
 import { useListPage } from "../../hooks/useListPage"
 
 import { Pagination } from "@/shared/components/Pagination"
-import { HeroHeader } from "./components/HeroHeader"
 import { ProductGrid } from "./components/ProductGrid"
 import { SortToolbar } from "./components/SortToolbar"
 
@@ -18,10 +17,8 @@ const ListPage: React.FC = () => {
         nextPage,
         prevPage,
         products,
-        searchRef,
         condition,
         toggleSort,
-        handleSearch,
         toggleCondition,
         navigateToDetail,
     } = useListPage();
@@ -32,7 +29,6 @@ const ListPage: React.FC = () => {
 
     return (
         <>
-            <HeroHeader handleSearch={handleSearch} searchRef={searchRef} />
             <SortToolbar
                 sort={sort}
                 condition={condition}
