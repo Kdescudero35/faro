@@ -1,74 +1,115 @@
-# React + TypeScript + Vite
+# Faro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Faro es una aplicación web moderna construida con React 19 y Vite, diseñada para proporcionar una experiencia de usuario fluida. Aprovecha un stack tecnológico robusto que incluye Tailwind CSS para estilos, TanStack Query para la obtención de datos y Zustand para la gestión del estado.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías Clave
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **[React 19](https://react.dev/)**: La biblioteca para interfaces de usuario web y nativas.
+- **[Vite](https://vitejs.dev/)**: Herramientas de Frontend de Próxima Generación.
+- **[Tailwind CSS 4](https://tailwindcss.com/)**: Un framework CSS de utilidad primero para el desarrollo rápido de UI.
+- **[TanStack Query](https://tanstack.com/query/latest)**: Potente gestión de estado asíncrono.
+- **[Zustand](https://zustand-demo.pmnd.rs/)**: Una solución de gestión de estado pequeña, rápida y escalable.
+- **[React Router 7](https://reactrouter.com/)**: Enrutamiento declarativo para aplicaciones web React.
+- **[MSW (Mock Service Worker)](https://mswjs.io/)**: Mocking de API para navegador y nodo.
+- **[Magic UI](https://magicui.design/docs/components/animated-grid-pattern)**: Componentes de interfaz de usuario animados y modernos.
+- **[shadcn/ui](https://ui.shadcn.com/docs/components/skeleton)**: Colección de componentes reutilizables bellamente diseñados.
 
-## React Compiler
+## 🛠️ Primeros Pasos
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Sigue estos pasos para configurar el proyecto localmente.
 
-## Expanding the ESLint configuration
+### Prerrequisitos
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js (Se recomienda la última versión LTS)
+- pnpm (Gestor de paquetes recomendado)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Instalación
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Clonar el repositorio:**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+    ```bash
+    git clone <url-del-repositorio>
+    cd faro
+    ```
+
+2.  **Instalar dependencias:**
+
+    ```bash
+    pnpm install
+    ```
+
+### Ejecutando la Aplicación
+
+Inicia el servidor de desarrollo:
+
+```bash
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+La aplicación estará disponible en `http://localhost:5173` (o el puerto que se muestre en tu terminal).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Construyendo para Producción
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Para crear una build de producción:
+
+```bash
+pnpm build
 ```
-# faro
+
+Para previsualizar la build de producción localmente:
+
+```bash
+pnpm preview
+```
+
+### Habilitar Mocks en Preview
+
+Por defecto, los mocks (MSW) están deshabilitados en la build de producción. Si deseas probar la aplicación con datos simulados en modo preview, debes construir el proyecto con la variable de entorno `VITE_ENABLE_MSW=true`:
+
+```bash
+VITE_ENABLE_MSW=true pnpm build
+pnpm preview
+```
+
+## 📂 Arquitectura del Proyecto
+
+El proyecto sigue una arquitectura basada en características (features) para asegurar escalabilidad y mantenibilidad.
+
+```
+src/
+├── app/              # Configuración global de la aplicación
+│   ├── router.tsx    # Configuración de enrutamiento de la aplicación
+│   └── index.css     # Estilos globales y directivas de Tailwind
+├── features/         # Módulos basados en características
+│   └── items/        # Característica 'Items' (componentes, hooks, etc.)
+├── shared/           # Recursos compartidos entre características
+│   ├── components/   # Componentes UI reutilizables
+│   ├── hooks/        # Hooks personalizados compartidos
+│   └── types.ts      # Definiciones TypeScript compartidas
+├── store/            # Gestión de estado global (stores de Zustand)
+├── assets/           # Activos estáticos (imágenes, fuentes, etc.)
+├── lib/              # Bibliotecas de utilidad y configuraciones
+├── mocks/            # Mocks de API usando MSW
+└── main.tsx          # Punto de entrada de la aplicación
+```
+
+### Directorios Clave
+
+-   **`src/features`**: Contiene la lógica de negocio principal, dividida por características del dominio. Cada carpeta de característica debería contener idealmente sus propios componentes, hooks y tipos.
+-   **`src/shared`**: Contiene código que se utiliza en múltiples características, como componentes UI genéricos (botones, inputs) y funciones de utilidad.
+-   **`src/store`**: Gestión de estado centralizada usando Zustand.
+-   **`src/mocks`**: Contiene manejadores y configuración para Mock Service Worker, permitiendo el desarrollo sin un backend.
+
+## 🚀 Despliegue
+
+Puedes acceder a la aplicación desplegada en Vercel aquí:
+[faro-steel.vercel.app](https://faro-steel.vercel.app)
+
+## 🔮 Mejoras Futuras
+
+Si tuviera más tiempo, me gustaría implementar las siguientes mejoras:
+
+1.  **Pruebas Unitarias y de Integración**: Asegurar la robustez del código mediante tests exhaustivos.
+2.  **Historial de Compras**: Una sección dedicada para que los usuarios vean sus pedidos anteriores.
+3.  **Animaciones y Transiciones**: Mejorar la experiencia de usuario con micro-interacciones más fluidas.
+4.  **Más Productos**: Ampliar el catálogo para demostrar mejor la escalabilidad de la lista y los filtros.
