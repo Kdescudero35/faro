@@ -1,6 +1,6 @@
-# Faro
+# Prueba Mercado Libre
 
-Faro es una aplicación web moderna construida con React 19 y Vite, diseñada para proporcionar una experiencia de usuario fluida. Aprovecha un stack tecnológico robusto que incluye Tailwind CSS para estilos, TanStack Query para la obtención de datos y Zustand para la gestión del estado.
+Prueba Mercado Libre es una aplicación web moderna construida con React 19 y Vite, diseñada para proporcionar una experiencia de usuario fluida. Aprovecha un stack tecnológico robusto que incluye Tailwind CSS para estilos, TanStack Query para la obtención de datos y Zustand para la gestión del estado.
 
 ## 🚀 Tecnologías Clave
 
@@ -81,6 +81,7 @@ src/
 │   ├── router.tsx    # Configuración de enrutamiento de la aplicación
 │   └── index.css     # Estilos globales y directivas de Tailwind
 ├── features/         # Módulos basados en características
+│   ├── cart/         # Característica 'Cart' (gestión del carrito)
 │   └── items/        # Característica 'Items' (componentes, hooks, etc.)
 ├── shared/           # Recursos compartidos entre características
 │   ├── components/   # Componentes UI reutilizables
@@ -95,7 +96,7 @@ src/
 
 ### Directorios Clave
 
--   **`src/features`**: Contiene la lógica de negocio principal, dividida por características del dominio. Cada carpeta de característica debería contener idealmente sus propios componentes, hooks y tipos.
+-   **`src/features`**: Contiene la lógica de negocio principal, dividida por características del dominio (actualmente `cart` y `items`). Cada carpeta de característica debería contener idealmente sus propios componentes, hooks y tipos.
 -   **`src/shared`**: Contiene código que se utiliza en múltiples características, como componentes UI genéricos (botones, inputs) y funciones de utilidad.
 -   **`src/store`**: Gestión de estado centralizada usando Zustand.
 -   **`src/mocks`**: Contiene manejadores y configuración para Mock Service Worker, permitiendo el desarrollo sin un backend.
