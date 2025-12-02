@@ -1,13 +1,13 @@
 export interface Installments {
+    rate?: number;
     amount: number;
     quantity: number;
-    rate?: number;
     currency_id?: string;
 }
 
 export interface Shipping {
-    free_shipping: boolean;
     mode?: string;
+    free_shipping: boolean;
     logistic_type?: string;
     store_pick_up?: boolean;
 }
@@ -47,19 +47,19 @@ export interface Product {
     id: string;
     title: string;
     price: number;
-    original_price?: number | null;
     reviews?: Reviews;
     pictures?: Picture[];
     shipping?: Shipping;
     condition: ConditionType;
-    thumbnail?: string;
     warranty?: string | null;
+    thumbnail?: string;
     permalink?: string;
     currency_id: string;
     attributes?: Attribute[];
     description?: Description;
     installments?: Installments;
     sold_quantity?: number;
+    original_price?: number | null;
     seller_address?: SellerAddress;
     available_quantity?: number;
 }

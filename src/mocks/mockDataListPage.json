@@ -1,284 +1,274 @@
     {
-  "query": "iphone",
-  "paging": {
-    "total": 1500,
-    "offset": 0,
-    "limit": 3
-  },
-  "results": [
-    {
-      "id": "MLA100000001",
-      "title": "Apple iPhone 13 (128 GB) - Azul",
-      "price": 1367999,
-      "currency_id": "ARS",
-      "condition": "new",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13.webp?v=1757093138",
-      "original_price": 1499999,
-      "available_quantity": 42,
-      "installments": {
-        "quantity": 12,
-        "amount": 113999.92
-      },
-      "shipping": {
-        "free_shipping": true
-      },
-      "reviews": {
-        "rating_average": 4.9,
-        "total": 345
-      },
-      "sold_quantity": 2156,
-      "warranty": "24 meses de garantía oficial",
-      "seller_address": {
-        "city": "Buenos Aires",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 13 con chip A15 Bionic, pantalla de 6.1 pulgadas, sistema de doble cámara 12MP. Resistencia al agua IP67, batería de larga duración."
-    },
-    {
-      "id": "MLA100000002",
-      "title": "iPhone 13 (close-up)",
-      "price": 1425000,
-      "currency_id": "ARS",
-      "condition": "new",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13Mini.webp?v=1757093138",
-      "original_price": 1599000,
-      "available_quantity": 28,
-      "installments": {
-        "quantity": 12,
-        "amount": 118750
-      },
-      "shipping": {
-        "free_shipping": true
-      },
-      "reviews": {
-        "rating_average": 4.8,
-        "total": 267
-      },
-      "sold_quantity": 1834,
-      "warranty": "24 meses de garantía oficial",
-      "seller_address": {
-        "city": "CABA",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 13 Mini con pantalla de 5.4 pulgadas, chip A15 Bionic, doble cámara 12MP. Compacto y potente, perfecto para una sola mano."
-    },
-    {
-      "id": "MLA100000003",
-      "title": "iPhone 14 Pro Max (256 GB) - Negro",
-      "price": 2290000,
-      "currency_id": "ARS",
-      "condition": "new",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138",
-      "original_price": 2699000,
-      "available_quantity": 15,
-      "installments": {
-        "quantity": 12,
-        "amount": 190833.33
-      },
-      "shipping": {
-        "free_shipping": true
-      },
-      "reviews": {
-        "rating_average": 4.9,
-        "total": 521
-      },
-      "sold_quantity": 4203,
-      "warranty": "24 meses de garantía oficial",
-      "seller_address": {
-        "city": "Mendoza",
-        "state": "Mendoza"
-      },
-      "description": "iPhone 14 Pro Max con pantalla Super Retina XDR de 6.7 pulgadas, chip A16 Bionic, cámara de 48MP. Resistencia al agua IP68."
-    },
-    {
-      "id": "MLA100000004",
-      "title": "iPhone 14 Pro Max (512 GB) - Grafito",
-      "price": 2499000,
-      "currency_id": "ARS",
-      "condition": "new",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138",
-      "original_price": 2899000,
-      "available_quantity": 12,
-      "installments": {
-        "quantity": 12,
-        "amount": 208250
-      },
-      "shipping": {
-        "free_shipping": true
-      },
-      "reviews": {
-        "rating_average": 4.9,
-        "total": 498
-      },
-      "sold_quantity": 3876,
-      "warranty": "24 meses de garantía oficial",
-      "seller_address": {
-        "city": "Rosario",
-        "state": "Santa Fe"
-      },
-      "description": "iPhone 14 Pro Max 512GB, pantalla ProMotion 120Hz, cámara ultra gran angular con Night Mode mejorado."
-    },
-    {
-      "id": "MLA100000005",
-      "title": "iPhone 12 Pro (256 GB) - Plata",
-      "price": 1099999,
-      "currency_id": "ARS",
-      "condition": "used",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138",
-      "available_quantity": 8,
-      "installments": {
-        "quantity": 12,
-        "amount": 91666.58
-      },
-      "shipping": {
-        "free_shipping": true
-      },
-      "reviews": {
-        "rating_average": 4.8,
-        "total": 234
-      },
-      "sold_quantity": 1567,
-      "warranty": "12 meses de garantía",
-      "seller_address": {
-        "city": "La Plata",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 12 Pro usado en perfecto estado, chip A14 Bionic, pantalla OLED de 6.1 pulgadas, sistema triple cámara."
-    },
-    {
-      "id": "MLA100000006",
-      "title": "iPhone 12 Pro (128 GB) - Negro",
-      "price": 1049000,
-      "currency_id": "ARS",
-      "condition": "used",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138",
-      "available_quantity": 5,
-      "installments": {
-        "quantity": 12,
-        "amount": 87416.67
-      },
-      "shipping": {
-        "free_shipping": false
-      },
-      "reviews": {
-        "rating_average": 4.6,
-        "total": 145
-      },
-      "sold_quantity": 892,
-      "warranty": "6 meses de garantía",
-      "seller_address": {
-        "city": "San Isidro",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 12 Pro 128GB reacondicionado, funciona perfectamente, incluye accesorios originales."
-    },
-    {
-      "id": "MLA100000007",
-      "title": "iPhone 11 Pro (128 GB) - Negro",
-      "price": 799999,
-      "currency_id": "ARS",
-      "condition": "used",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone11Pro.webp?v=1757093138",
-      "available_quantity": 3,
-      "installments": {
-        "quantity": 12,
-        "amount": 66666.58
-      },
-      "shipping": {
-        "free_shipping": false
-      },
-      "reviews": {
-        "rating_average": 4.5,
-        "total": 189
-      },
-      "sold_quantity": 756,
-      "warranty": "3 meses de garantía",
-      "seller_address": {
-        "city": "Villa Crespo",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 11 Pro usado, pantalla OLED de 5.8 pulgadas, triple cámara, excelente relación precio-rendimiento."
-    },
-    {
-      "id": "MLA100000008",
-      "title": "iPhone X (64 GB) - Gris Espacial",
-      "price": 365000,
-      "currency_id": "ARS",
-      "condition": "used",
-      "thumbnail": "https://olimpica.vtexassets.com/arquivos/ids/857916/image-3ab3283018f745408dbb770795103ea9.jpg?v=637897845793170000",
-      "available_quantity": 2,
-      "installments": {
-        "quantity": 12,
-        "amount": 30416.67
-      },
-      "shipping": {
-        "free_shipping": false
-      },
-      "reviews": {
-        "rating_average": 4.3,
-        "total": 412
-      },
-      "sold_quantity": 2134,
-      "warranty": "3 meses de garantía",
-      "seller_address": {
-        "city": "San Justo",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone X 64GB usado, pantalla OLED de 5.8 pulgadas, reconocimiento facial Face ID, buena batería."
-    },
-    {
-      "id": "MLA100000009",
-      "title": "iPhone 8 (64 GB) - Gris Espacial",
-      "price": 455000,
-      "currency_id": "ARS",
-      "condition": "used",
-      "thumbnail": "https://exitocol.vtexassets.com/arquivos/ids/24430982/iphone-8-plus-64-gb-gris-espacial-reacondicionado-14-meses-garantia.jpg?v=638609084682100000",
-      "available_quantity": 7,
-      "installments": {
-        "quantity": 12,
-        "amount": 37916.67
-      },
-      "shipping": {
-        "free_shipping": false
-      },
-      "reviews": {
-        "rating_average": 4.2,
-        "total": 267
-      },
-      "sold_quantity": 1345,
-      "warranty": "6 meses de garantía",
-      "seller_address": {
-        "city": "Flores",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 8 reacondicionado, excelente estado, batería con 89% de capacidad, incluye funda protectora."
-    },
-    {
-      "id": "MLA100000010",
-      "title": "iPhone 12 Pro Max (256 GB) - Vista trasera",
-      "price": 1699000,
-      "currency_id": "ARS",
-      "condition": "used",
-      "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12ProMax.webp?v=1757093138",
-      "available_quantity": 4,
-      "installments": {
-        "quantity": 12,
-        "amount": 141583.33
-      },
-      "shipping": {
-        "free_shipping": true
-      },
-      "reviews": {
-        "rating_average": 4.7,
-        "total": 356
-      },
-      "sold_quantity": 2789,
-      "warranty": "12 meses de garantía",
-      "seller_address": {
-        "city": "Caballito",
-        "state": "Buenos Aires"
-      },
-      "description": "iPhone 12 Pro Max usado en excelente estado, pantalla ProMotion, triple cámara con zoom 5x, batería de larga duración."
+        "query": "iphone",
+        "paging": {
+            "total": 1500,
+            "offset": 0,
+            "limit": 3
+        },
+        "results": [
+            {
+                "id": "MLA100000001",
+                "title": "Apple iPhone 13 (128 GB) - Azul",
+                "price": 1367999,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13.webp?v=1757093138",
+                "original_price": 1499999,
+                "available_quantity": 42,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 113999.92
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.9,
+                    "total": 345
+                },
+                "sold_quantity": 2156,
+                "warranty": "24 meses de garantía oficial",
+                "seller_address": {
+                    "city": "Buenos Aires",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000002",
+                "title": "Apple iPhone 13 (128 GB) - Medianoche",
+                "price": 1367999,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone13Mini.webp?v=1757093138",
+                "original_price": 1599000,
+                "available_quantity": 28,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 118750
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.8,
+                    "total": 267
+                },
+                "sold_quantity": 1834,
+                "warranty": "24 meses de garantía oficial",
+                "seller_address": {
+                    "city": "CABA",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000003",
+                "title": "iPhone 14 Pro Max (256 GB) - Negro",
+                "price": 2290000,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138",
+                "original_price": 2699000,
+                "available_quantity": 15,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 190833.33
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.9,
+                    "total": 521
+                },
+                "sold_quantity": 4203,
+                "warranty": "24 meses de garantía oficial",
+                "seller_address": {
+                    "city": "Mendoza",
+                    "state": "Mendoza"
+                }
+            },
+            {
+                "id": "MLA100000004",
+                "title": "iPhone 14 Pro Max (512 GB) - Grafito",
+                "price": 2499000,
+                "currency_id": "ARS",
+                "condition": "new",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone14ProMax.webp?v=1757093138",
+                "original_price": 2899000,
+                "available_quantity": 12,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 208250
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.9,
+                    "total": 498
+                },
+                "sold_quantity": 3876,
+                "warranty": "24 meses de garantía oficial",
+                "seller_address": {
+                    "city": "Rosario",
+                    "state": "Santa Fe"
+                }
+            },
+            {
+                "id": "MLA100000005",
+                "title": "iPhone 12 Pro (256 GB) - Plata",
+                "price": 1099999,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138",
+                "available_quantity": 8,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 91666.58
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.8,
+                    "total": 234
+                },
+                "sold_quantity": 1567,
+                "warranty": "12 meses de garantía",
+                "seller_address": {
+                    "city": "La Plata",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000006",
+                "title": "iPhone 12 Pro (128 GB) - Negro",
+                "price": 1049000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12Pro.webp?v=1757093138",
+                "available_quantity": 5,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 87416.67
+                },
+                "shipping": {
+                    "free_shipping": false
+                },
+                "reviews": {
+                    "rating_average": 4.6,
+                    "total": 145
+                },
+                "sold_quantity": 892,
+                "warranty": "6 meses de garantía",
+                "seller_address": {
+                    "city": "San Isidro",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000007",
+                "title": "iPhone 11 Pro (128 GB) - Negro",
+                "price": 799999,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone11Pro.webp?v=1757093138",
+                "available_quantity": 3,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 66666.58
+                },
+                "shipping": {
+                    "free_shipping": false
+                },
+                "reviews": {
+                    "rating_average": 4.5,
+                    "total": 189
+                },
+                "sold_quantity": 756,
+                "warranty": "3 meses de garantía",
+                "seller_address": {
+                    "city": "Villa Crespo",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000008",
+                "title": "iPhone X (64 GB) - Gris Espacial",
+                "price": 365000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://olimpica.vtexassets.com/arquivos/ids/857916/image-3ab3283018f745408dbb770795103ea9.jpg?v=637897845793170000",
+                "available_quantity": 2,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 30416.67
+                },
+                "shipping": {
+                    "free_shipping": false
+                },
+                "reviews": {
+                    "rating_average": 4.3,
+                    "total": 412
+                },
+                "sold_quantity": 2134,
+                "warranty": "3 meses de garantía",
+                "seller_address": {
+                    "city": "San Justo",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000009",
+                "title": "iPhone 8 (64 GB) - Gris Espacial",
+                "price": 455000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://exitocol.vtexassets.com/arquivos/ids/24430982/iphone-8-plus-64-gb-gris-espacial-reacondicionado-14-meses-garantia.jpg?v=638609084682100000",
+                "available_quantity": 7,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 37916.67
+                },
+                "shipping": {
+                    "free_shipping": false
+                },
+                "reviews": {
+                    "rating_average": 4.2,
+                    "total": 267
+                },
+                "sold_quantity": 1345,
+                "warranty": "6 meses de garantía",
+                "seller_address": {
+                    "city": "Flores",
+                    "state": "Buenos Aires"
+                }
+            },
+            {
+                "id": "MLA100000010",
+                "title": "iPhone 12 Pro Max (256 GB) - Vista trasera",
+                "price": 1699000,
+                "currency_id": "ARS",
+                "condition": "used",
+                "thumbnail": "https://www.clevercel.co/cdn/shop/files/Portadas_iPhone12ProMax.webp?v=1757093138",
+                "available_quantity": 4,
+                "installments": {
+                    "quantity": 12,
+                    "amount": 141583.33
+                },
+                "shipping": {
+                    "free_shipping": true
+                },
+                "reviews": {
+                    "rating_average": 4.7,
+                    "total": 356
+                },
+                "sold_quantity": 2789,
+                "warranty": "12 meses de garantía",
+                "seller_address": {
+                    "city": "Caballito",
+                    "state": "Buenos Aires"
+                }
+            }
+        ]
     }
-  ]
-}

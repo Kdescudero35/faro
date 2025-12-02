@@ -1,56 +1,45 @@
-import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { useQuery } from "@tanstack/react-query";
-import type { Product } from "../types";
-
 import { useCartStore } from "../../../store/cartStore";
+import type { Product } from "../types";
 
 interface UseDetailReturn {
     error: Error | null;
     product: Product | null | undefined;
     loading: boolean;
-    quantity: number;
     handleAddToCart: () => void;
-    handleIncrement: () => void;
-    handleDecrement: () => void;
 }
+
+const fetchProductById = async (id: string): Promise<Product> => {
+    const response = await fetch(`/api/products/${id}`);
+    if (!response.ok) {
+        throw new Error('Error al obtener el producto');
+    }
+    return response.json() as Promise<Product>;
+};
 
 export const useDetail = (): UseDetailReturn => {
     const { id } = useParams<{ id: string }>();
     const addToCart = useCartStore((state) => state.addToCart);
 
-    const [quantity, setQuantity] = useState(1);
-
-    const handleIncrement = () => setQuantity((q) => q + 1);
-    const handleDecrement = () => setQuantity((q) => (q > 1 ? q - 1 : 1));
-
     const { data, isLoading, error } = useQuery({
         queryKey: ['product', id],
-        queryFn: async () => {
-            if (!id) return null;
-            const response = await fetch(`/api/products/${id}`);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json() as Promise<Product>;
-        },
+        queryFn: async () => await fetchProductById(id!),
         enabled: !!id,
+        staleTime: 1000 * 60 * 5,
     });
 
     const handleAddToCart = () => {
         if (data) {
-            addToCart(data, quantity);
+            addToCart(data);
         }
-    }
+    };
 
     return {
-        error,
+        error: error as Error | null,
         product: data,
         loading: isLoading,
-        quantity,
         handleAddToCart,
-        handleIncrement,
-        handleDecrement,
     };
 };

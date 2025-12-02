@@ -6,15 +6,11 @@ export default function App() {
     <div className="flex relative flex-col w-full min-h-screen">
       <Header />
 
-      <main className="min-h-dvh">
-        <div className="px-4 mx-auto max-w-6xl">
+      <main className="min-h-dvh bg-[#ededed]">
+        <div className="px-1 mx-auto max-w-6xl">
           <Outlet />
         </div>
       </main>
-
-      <footer className="mt-10 border-t">
-        <div className="px-4 py-6 mx-auto max-w-6xl text-xs opacity-70"></div>
-      </footer>
     </div>
   );
 }

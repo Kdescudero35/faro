@@ -23,12 +23,12 @@ const ProductAttributes: React.FC<ProductAttributesProps> = ({ product }) => {
                         key={attr.id}
                         className="flex items-start gap-3 p-4 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors border border-gray-200"
                     >
-                        <div className="flex-shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2" />
+                        <div className="shrink-0 w-2 h-2 rounded-full bg-blue-500 mt-2" />
                         <div className="flex-1 min-w-0">
                             <p className="text-xs font-medium uppercase text-gray-500 mb-1">
                                 {attr.name}
                             </p>
-                            <p className="text-sm font-semibold text-gray-900 break-words">
+                            <p className="text-sm font-semibold text-gray-900 wrap-break-word">
                                 {attr.value_name}
                             </p>
                         </div>

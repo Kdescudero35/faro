@@ -1,22 +1,19 @@
 export const validateSearchInput = (input: string): string => {
     if (!input || typeof input !== 'string') return '';
 
-    let sanitized = input.trim();
-
-    sanitized = sanitized.substring(0, 100);
-    sanitized = sanitized.replace(/[^\w\s\-./áéíóúñäöüßÁÉÍÓÚÑÄÖÜ]/g, '');
-
-    return sanitized;
+    return input
+        .trim()
+        .substring(0, 100)
+        .replace(/[^\w\s\-./áéíóúñäöüßÁÉÍÓÚÑÄÖÜ]/g, '');
 };
 
 export const validateOffset = (offset: number): number => {
-    const num = parseInt(String(offset), 10);
-    return isNaN(num) || num < 0 ? 0 : num;
+    const num = Number(offset);
+    return num >= 0 && !isNaN(num) ? num : 0;
 };
 
 export const validateLimit = (limit: number): number => {
-    const num = parseInt(String(limit), 10);
+    const num = Number(limit);
     if (isNaN(num) || num < 1) return 10;
-    if (num > 100) return 100;
-    return num;
+    return Math.min(num, 100);
 };

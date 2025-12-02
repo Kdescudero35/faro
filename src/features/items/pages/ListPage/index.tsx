@@ -1,52 +1,48 @@
-import { useListPage } from "../../hooks/useListPage"
+import { useListPage } from "../../hooks/useListPage";
 
-import { Pagination } from "@/shared/components/Pagination"
-import { ProductGrid } from "./components/ProductGrid"
-import { SortToolbar } from "./components/SortToolbar"
+import { Pagination } from "@/shared/components/Pagination";
+import { ProductGrid } from "./components/ProductGrid";
+import { SortToolbar } from "./components/SortToolbar";
 
-import { ServiceUnavailable } from "@/shared/components/ServiceUnavailable"
+import { ServiceUnavailable } from "@/shared/components/ServiceUnavailable";
 
 const ListPage: React.FC = () => {
-    const {
-        sort,
-        limit,
-        total,
-        error,
-        offset,
-        loading,
-        nextPage,
-        prevPage,
-        products,
-        condition,
-        toggleSort,
-        toggleCondition,
-        navigateToDetail,
-    } = useListPage();
+  const {
+    limit,
+    total,
+    error,
+    offset,
+    loading,
+    nextPage,
+    prevPage,
+    products,
+    toggleSort,
+    navigateToDetail,
+  } = useListPage();
 
-    if (error) {
-        return <ServiceUnavailable />
-    }
+  if (error) {
+    return <ServiceUnavailable />;
+  }
 
-    return (
-        <>
-            <SortToolbar
-                sort={sort}
-                condition={condition}
-                onToggleSort={toggleSort}
-                onToggleCondition={toggleCondition}
-            />
-            <ProductGrid products={products} loading={loading} navigateToDetail={navigateToDetail} />
-            <div className="flex gap-4 justify-center items-center mt-8">
-                <Pagination
-                    limit={limit}
-                    offset={offset}
-                    total={total}
-                    prevPage={prevPage}
-                    nextPage={nextPage}
-                />
-            </div>
-        </>
-    );
+  return (
+    <div className="flex flex-col w-full h-auto min-h-screen gap-6">
+      <SortToolbar onToggleSort={toggleSort} />
+      <ProductGrid
+        loading={loading}
+        products={products}
+        navigateToDetail={navigateToDetail}
+      />
+      <div className="flex gap-4 justify-center items-center mt-8">
+        <Pagination
+          limit={limit}
+          total={total}
+          offset={offset}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default ListPage;

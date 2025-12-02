@@ -10,7 +10,7 @@ interface ProductGridProps {
 }
 
 export const ProductGrid: React.FC<ProductGridProps> = ({ products, loading, navigateToDetail }) => (
-    <section className="bg-white rounded-none">
+    <section className="bg-white rounded-none p-5">
         <div className="flex flex-col w-full">
             {loading ? (
                 [...Array(5)].map((_, i) => <SkeletonListPage key={i} />)
@@ -20,8 +20,8 @@ export const ProductGrid: React.FC<ProductGridProps> = ({ products, loading, nav
                 ))
             ) : (
                 <div className="py-12 text-center">
-                    <section className="flex flex-col gap-6 justify-center items-center py-16 w-full text-center bg-gray-100 rounded-xl border border-gray-300 border-dashed">
-                        <div className="p-4 rounded-full bg-primary/10 text-primary">
+                    <section className="flex flex-col gap-6 justify-center items-center py-16 w-full text-center bg-gray-100 rounded-xl border border-gray-300 border">
+                        <div className="p-4 rounded-full bg-primary/10">
                             <SearchX size={48} />
                         </div>
                         <div className="flex flex-col gap-2">
